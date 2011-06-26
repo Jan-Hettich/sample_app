@@ -6,4 +6,4 @@ tmp/
 .idea
 *~
 #*#
-
+webrat.log
