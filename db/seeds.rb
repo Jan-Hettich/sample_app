@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+require 'faker'
+
+User.destroy_all
+
+5.times do
+  first_name = Faker::Name.first_name
+  last_name = Faker::Name.last_name
+  name = first_name + ' ' + last_name
+  email = first_name + last_name[0] + '@tutorial.org'
+  email.downcase!
+  User.create! :name => name, :email => email
+end
