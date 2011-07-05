@@ -13,5 +13,10 @@
 class User < ActiveRecord::Base
   attr_accessible :name, :email
 
+  validates :name, :presence => true
+
+  validates :email, :presence => true,
+                    :format => { :with => /\A.+@.+\Z/i }
+
   has_many :microposts, :dependent => :destroy
 end
