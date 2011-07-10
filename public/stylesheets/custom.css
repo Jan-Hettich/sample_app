@@ -120,7 +120,7 @@ td.main {
 td.sidebar {
     width: 35%;
     padding: 1em;
-    vertical-align: top;
+    /* vertical-align: top;/*
     background: #ffc;
 }
 
