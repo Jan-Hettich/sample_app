@@ -245,3 +245,16 @@ div.field, div.actions {
  list-style: square;
 }
 
+/* Users index */
+
+.users li {
+    list-style: none;
+}
+
+.pagination_top {
+    margin-bottom: 25px;
+}
+
+.pagination_bottom {
+    margin-top: 25px;
+}
