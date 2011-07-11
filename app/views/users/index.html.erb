@@ -3,12 +3,7 @@
 <div class="pagination_top"><%= will_paginate %></div>
 
 <ul class="users">
-  <% @users.each do |user| %>
-    <li>
-      <%= gravatar_for user, :size => 30 %>
-      <%= link_to user.name, user %>
-    </li>
-  <% end %>
+  <%= render @users %>  <!-- This automatically iterates over the users and calls the partial for each one -->
 </ul>
 
 <div class="pagination_bottom"><%= will_paginate %></div>
