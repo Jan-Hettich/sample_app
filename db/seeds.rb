@@ -8,9 +8,7 @@
 
 require 'faker'
 
-User.destroy_all
-
-5.times do
+12.times do
   first_name = Faker::Name.first_name
   last_name = Faker::Name.last_name
   name = first_name + ' ' + last_name
