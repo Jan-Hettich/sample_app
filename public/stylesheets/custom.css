@@ -120,7 +120,7 @@ td.main {
 td.sidebar {
     width: 35%;
     padding: 1em;
-    /* vertical-align: top;*/
+    vertical-align: top;
     background: #ffc;
 }
 
@@ -135,12 +135,21 @@ h1.micropost {
   margin-bottom: 0.3em;
 }
 
+table.profile td.main div.pagination_top{
+  margin-top: 2em;
+  margin-bottom: 0;
+}
+
 table.microposts {
-  margin-top: 1em;
+  margin-top: 0;
 }
 
 table.microposts tr {
   height: 70px;
+}
+
+table.microposts tr.pagination {
+  height: inherit;
 }
 
 table.microposts tr td.gravatar {
