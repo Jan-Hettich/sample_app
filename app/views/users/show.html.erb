@@ -5,6 +5,7 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <%= render 'shared/micropost_form' %>
       <div class="pagination_top"><%= will_paginate @microposts %></div>
       <% unless @user.microposts.empty? %>
         <table class="microposts" summary="User microposts">
