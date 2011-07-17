@@ -25,10 +25,19 @@ describe User do
       @user.microposts.should == [@mp2, @mp1]
     end
 
-    it "should destroy the associated microposts" do
+     it "should destroy the associated microposts (v1)" do
+       @user.destroy
+       [@mp1, @mp2].each do |micropost|
+        Micropost.find_by_id(micropost.id).should be_nil
+       end
+     end
+
+    it "should destroy the associated microposts (v2)" do
       @user.destroy
       [@mp1, @mp2].each do |micropost|
-        Micropost.find_by_id(micropost).should be_nil
+        lambda do
+          Micropost.find(micropost.id)
+        end.should raise_error(ActiveRecord::RecordNotFound)
       end
     end
 
