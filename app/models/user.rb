@@ -19,4 +19,14 @@ class User < ActiveRecord::Base
                     :format => { :with => /\A.+@.+\Z/i }
 
   has_many :microposts, :dependent => :destroy
+
+  class << self
+
+    def authenticate(email)
+       user = find_by_email(email)
+    end
+
+  end
+
+
 end
