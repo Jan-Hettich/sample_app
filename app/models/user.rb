@@ -23,7 +23,11 @@ class User < ActiveRecord::Base
   class << self
 
     def authenticate(email)
-       user = find_by_email(email)
+      user = find_by_email(email)
+    end
+
+    def authenticate_with_token(token)
+      user = find_by_id(token)
     end
 
   end
